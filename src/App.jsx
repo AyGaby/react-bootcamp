@@ -1,22 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import TaskList from "./components/TaskList";
+import AddTaskForm from "./components/AddTaskForm";
 
 function App() {
-
-
   return (
     <>
-      <div>React</div>
-     
+      <TaskList />
+      <AddTaskForm />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 
-// ejemplo de estructura 
+// ejemplo de estructura
 
 // import React from 'react';
 // import { TaskProvider } from './context/TaskContext.jsx';
@@ -35,4 +31,3 @@ export default App
 // };
 
 // export default App;
-
