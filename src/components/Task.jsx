@@ -1,12 +1,7 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardActions, CardContent, Typography } from "@mui/material";
 
+import TaskEdit from "./TaskEdit";
+import TaskRemove from "./TaskRemove";
 /* eslint-disable react/prop-types */
 const Task = ({ data }) => {
   return (
@@ -20,14 +15,13 @@ const Task = ({ data }) => {
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
             {data.description}
           </Typography>
-          <Typography variant="body2">
-            {data.isCompleted}
-            <br />
-            {'"a benevolent smile"'}
+          <Typography>
+            {data?.isCompleted ? "Completa" : "Incompleta"}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <TaskEdit />
+          <TaskRemove />
         </CardActions>
       </Card>
     </Box>
